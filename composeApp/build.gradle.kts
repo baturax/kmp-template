@@ -13,7 +13,6 @@ kotlin {
         val desktopMain by getting
         
         commonMain.dependencies {
-            implementation("sh.calvin.autolinktext:autolinktext:2.0.1")
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
@@ -24,7 +23,6 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtime.compose)
         }
         desktopMain.dependencies {
-            implementation("sh.calvin.autolinktext:autolinktext:2.0.1")
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
         }
