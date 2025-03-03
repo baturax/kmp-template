@@ -21,7 +21,7 @@ import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
-fun App() {
+fun app() {
     val boldText by produceState(initialValue = "") {
         value = getString(Res.string.bold_text)
     }
@@ -29,12 +29,13 @@ fun App() {
         value = getString(Res.string.italic_text)
     }
 
-    val fantasyFontFamily= FontFamily(
-        Font(Res.font.FantasqueSansMono_Regular, FontWeight.Normal),
-        Font(Res.font.FantasqueSansMono_Bold, FontWeight.Bold),
-        Font(Res.font.FantasqueSansMono_Italic, FontWeight.Normal, FontStyle.Italic),
-        Font(Res.font.FantasqueSansMono_BoldItalic, weight = FontWeight.Bold, FontStyle.Italic)
-    )
+    val fantasyFontFamily =
+        FontFamily(
+            Font(Res.font.FantasqueSansMono_Regular, FontWeight.Normal),
+            Font(Res.font.FantasqueSansMono_Bold, FontWeight.Bold),
+            Font(Res.font.FantasqueSansMono_Italic, FontWeight.Normal, FontStyle.Italic),
+            Font(Res.font.FantasqueSansMono_BoldItalic, weight = FontWeight.Bold, FontStyle.Italic),
+        )
 
     MaterialTheme {
         Row {
@@ -44,9 +45,8 @@ fun App() {
                 Text(text = italicText, fontFamily = fantasyFontFamily, fontStyle = FontStyle.Italic)
                 Image(
                     painter = painterResource(Res.drawable.compose_multiplatform),
-                    contentDescription = "Debee"
+                    contentDescription = "Debee",
                 )
-
             }
         }
     }
